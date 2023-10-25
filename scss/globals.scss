@@ -1,0 +1,31 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-top: 0;
+  }
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+
+  // position: relative; ///for footer with absolute position -->
+}
+textarea,
+input {
+  outline: none;
+  font-family: inherit;
+}
