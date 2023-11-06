@@ -1,2 +1,100 @@
 @import "globals";
 @import "footer";
+
+.background {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 94%);
+}
+.card {
+  width: 840px;
+  // height: 680px;
+  border-radius: 22px 22px 200px 22px;
+  padding: 56px;
+  background-color: white;
+  &__inputs {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 545px;
+    margin-bottom: 40px;
+
+    .inputLabel {
+      margin-bottom: 8px;
+      font-size: 14px;
+      letter-spacing: 0.23em;
+      color: hsl(0, 1%, 44%);
+    }
+    input {
+      width: 160px;
+      height: 72px;
+      margin-bottom: 8px;
+      padding-left: 24px;
+      border: 1px solid hsl(0, 0%, 86%);
+      border-radius: 8px;
+      font-size: inherit;
+      &::placeholder {
+        color: hsl(0, 1%, 54%);
+      }
+    }
+    .errorText {
+      display: none;
+    }
+    &__circleButton {
+      position: absolute;
+      bottom: -87px;
+      right: -184px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: none;
+      background-color: hsl(259, 100%, 65%);
+      cursor: pointer;
+      font-family: inherit;
+      text-align: center;
+      text-decoration: none;
+    }
+    .wrong {
+      p {
+        color: hsl(0, 100%, 67%);
+      }
+      input {
+        border: 1px solid hsl(0, 100%, 67%);
+      }
+      .errorText {
+        display: block;
+        font-size: 14px;
+        font-style: italic;
+        margin-bottom: 8px;
+      }
+    }
+  }
+  hr {
+    height: 1px;
+    background-color: hsl(0, 0%, 86%);
+    border: none;
+    margin-bottom: 48px;
+  }
+  &__results {
+    font-size: 104px;
+    font-weight: 700;
+    font-style: italic;
+    color: hsl(0, 0%, 8%);
+    p {
+      margin-bottom: 0;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      span {
+        color: hsl(259, 100%, 65%);
+        margin-right: -7px;
+        letter-spacing: 17px;
+      }
+    }
+  }
+}
+@import "mediaQs";

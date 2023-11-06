@@ -19,7 +19,43 @@
     <title>Frontend Mentor | Age calculator app</title>
   </head>
   <body>
-    Day DD Month MM Year YYYY -- years -- months -- days
+    <div class="background">
+      <div class="card">
+        <form class="card__inputs">
+          <div class="card__inputs__day">
+            <p class="inputLabel">DAY</p>
+            <input type="text" placeholder="DD" />
+            <p class="errorText"></p>
+          </div>
+          <div class="card__inputs__month">
+            <p class="inputLabel">MONTH</p>
+            <input type="text" placeholder="MM" />
+            <p class="errorText"></p>
+          </div>
+          <div class="card__inputs__year">
+            <p class="inputLabel">YEAR</p>
+            <input type="text" placeholder="YYYY" />
+            <p class="errorText"></p>
+          </div>
+          <button class="card__inputs__circleButton">
+            <img src="/assets/images/icon-arrow.svg" alt="" />
+          </button>
+        </form>
+        <hr />
+
+        <div class="card__results">
+          <p class="card__results__years">
+            <span class="yearsOutput">--</span>years
+          </p>
+          <p class="card__results__months">
+            <span class="monthsOutput">--</span>months
+          </p>
+          <p class="card__results__days">
+            <span class="daysOutput">--</span>days
+          </p>
+        </div>
+      </div>
+    </div>
 
     <div class="attribution">
       Challenge by
@@ -27,5 +63,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Alexander</a>.
     </div>
+    <script src="/index.js"></script>
   </body>
 </html>

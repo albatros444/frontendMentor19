@@ -44,4 +44,108 @@ input {
   color: hsl(228, 45%, 44%);
 }
 
+.background {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.card {
+  width: 840px;
+  border-radius: 22px 22px 200px 22px;
+  padding: 56px;
+  background-color: white;
+}
+.card__inputs {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 545px;
+  margin-bottom: 40px;
+}
+.card__inputs .inputLabel {
+  margin-bottom: 8px;
+  font-size: 14px;
+  letter-spacing: 0.23em;
+  color: hsl(0, 1%, 44%);
+}
+.card__inputs input {
+  width: 160px;
+  height: 72px;
+  margin-bottom: 8px;
+  padding-left: 24px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 8px;
+  font-size: inherit;
+}
+.card__inputs input::placeholder {
+  color: hsl(0, 1%, 54%);
+}
+.card__inputs .errorText {
+  display: none;
+}
+.card__inputs__circleButton {
+  position: absolute;
+  bottom: -87px;
+  right: -184px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+.card__inputs .wrong p {
+  color: hsl(0, 100%, 67%);
+}
+.card__inputs .wrong input {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+.card__inputs .wrong .errorText {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.card hr {
+  height: 1px;
+  background-color: hsl(0, 0%, 86%);
+  border: none;
+  margin-bottom: 48px;
+}
+.card__results {
+  font-size: 104px;
+  font-weight: 700;
+  font-style: italic;
+  color: hsl(0, 0%, 8%);
+}
+.card__results p {
+  margin-bottom: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.card__results p span {
+  color: hsl(259, 100%, 65%);
+  margin-right: -7px;
+  letter-spacing: 17px;
+}
+
+@media screen and (max-width: 400px) {
+  .background {
+    height: 100%;
+  }
+  .card {
+    width: 343px;
+    padding: 25px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
