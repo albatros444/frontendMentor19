@@ -1,9 +1,60 @@
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 870px) {
   .background {
-    height: 100%;
   }
   .card {
-    width: 343px;
+    width: 344px;
     padding: 25px;
+    padding-top: 48px;
+    border-radius: 22px 22px 100px 22px;
+    // margin-top: 85px;
+    // margin-bottom: 100px;
+
+    &__inputs {
+      width: 100%;
+      margin-bottom: 55px;
+      &__container {
+        .inputLabel {
+          font-size: 12px;
+          margin-bottom: 5px;
+        }
+        input {
+          width: 87px;
+          height: 54px;
+          font-size: 20px;
+          padding-left: 14px;
+          &::placeholder {
+            font-size: 20px;
+          }
+        }
+      }
+      &__circleButton {
+        right: 114px;
+        bottom: -87px;
+        width: 64px;
+        height: 64px;
+        img {
+          width: 25px;
+        }
+      }
+      .wrong {
+        .errorText {
+          font-size: 11px;
+          line-height: 1.2;
+        }
+      }
+    }
+    hr {
+      margin-bottom: 64px;
+    }
+    &__results {
+      font-size: 56px;
+      padding-bottom: 22px;
+      p {
+        span {
+          margin-right: 0px;
+          letter-spacing: -5px;
+        }
+      }
+    }
   }
 }

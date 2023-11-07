@@ -56,6 +56,7 @@ input {
   width: 840px;
   border-radius: 22px 22px 200px 22px;
   padding: 56px;
+  padding-bottom: 26px;
   background-color: white;
 }
 .card__inputs {
@@ -65,13 +66,15 @@ input {
   width: 545px;
   margin-bottom: 40px;
 }
-.card__inputs .inputLabel {
+.card__inputs__container .inputLabel {
+  display: block;
   margin-bottom: 8px;
   font-size: 14px;
   letter-spacing: 0.23em;
   color: hsl(0, 1%, 44%);
 }
-.card__inputs input {
+.card__inputs__container input {
+  display: block;
   width: 160px;
   height: 72px;
   margin-bottom: 8px;
@@ -79,11 +82,15 @@ input {
   border: 1px solid hsl(0, 0%, 86%);
   border-radius: 8px;
   font-size: inherit;
+  caret-color: hsl(259, 100%, 65%);
 }
-.card__inputs input::placeholder {
+.card__inputs__container input::placeholder {
   color: hsl(0, 1%, 54%);
 }
-.card__inputs .errorText {
+.card__inputs__container input:focus {
+  border: 1px solid hsl(259, 54%, 45%);
+}
+.card__inputs__container .errorText {
   display: none;
 }
 .card__inputs__circleButton {
@@ -102,8 +109,12 @@ input {
   font-family: inherit;
   text-align: center;
   text-decoration: none;
+  transition: all ease-in-out 0.153s;
 }
-.card__inputs .wrong p {
+.card__inputs__circleButton:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+.card__inputs .wrong label {
   color: hsl(0, 100%, 67%);
 }
 .card__inputs .wrong input {
@@ -114,10 +125,11 @@ input {
   font-size: 14px;
   font-style: italic;
   margin-bottom: 8px;
+  color: hsl(0, 100%, 67%);
 }
 .card hr {
-  height: 1px;
-  background-color: hsl(0, 0%, 86%);
+  height: 2px;
+  background-color: hsl(0, 2%, 92%);
   border: none;
   margin-bottom: 48px;
 }
@@ -126,6 +138,7 @@ input {
   font-weight: 700;
   font-style: italic;
   color: hsl(0, 0%, 8%);
+  padding-bottom: 30px;
 }
 .card__results p {
   margin-bottom: 0;
@@ -138,13 +151,53 @@ input {
   letter-spacing: 17px;
 }
 
-@media screen and (max-width: 400px) {
-  .background {
-    height: 100%;
-  }
+@media screen and (max-width: 870px) {
   .card {
-    width: 343px;
+    width: 344px;
     padding: 25px;
+    padding-top: 48px;
+    border-radius: 22px 22px 100px 22px;
+  }
+  .card__inputs {
+    width: 100%;
+    margin-bottom: 55px;
+  }
+  .card__inputs__container .inputLabel {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .card__inputs__container input {
+    width: 87px;
+    height: 54px;
+    font-size: 20px;
+    padding-left: 14px;
+  }
+  .card__inputs__container input::placeholder {
+    font-size: 20px;
+  }
+  .card__inputs__circleButton {
+    right: 114px;
+    bottom: -87px;
+    width: 64px;
+    height: 64px;
+  }
+  .card__inputs__circleButton img {
+    width: 25px;
+  }
+  .card__inputs .wrong .errorText {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  .card hr {
+    margin-bottom: 64px;
+  }
+  .card__results {
+    font-size: 56px;
+    padding-bottom: 22px;
+  }
+  .card__results p span {
+    margin-right: 0px;
+    letter-spacing: -5px;
   }
 }
 

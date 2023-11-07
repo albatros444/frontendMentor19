@@ -1,9 +1,9 @@
 const button = document.querySelector("button");
 const allInputs = document.querySelectorAll("input");
 const allErrorTexts = document.querySelectorAll(".errorText");
-const dayInput = document.querySelector(".card__inputs__day");
-const monthInput = document.querySelector(".card__inputs__month");
-const yearInput = document.querySelector(".card__inputs__year");
+const dayInput = document.querySelector(".dayCont");
+const monthInput = document.querySelector(".monthCont");
+const yearInput = document.querySelector(".yearCont");
 const years = document.querySelector(".yearsOutput");
 const months = document.querySelector(".monthsOutput");
 const days = document.querySelector(".daysOutput");
@@ -108,22 +108,22 @@ const getResult = () => {
   const inpYear = allInput.getFullYear();
   const inputMonth = allInput.getMonth();
   const inputDay = allInput.getDate();
-  // console.log(inpYear, inputMonth, inputDay);
+  console.log(inpYear, inputMonth, inputDay);
 
   const now = new Date();
   const yearNow = now.getFullYear();
   const monthNow = now.getMonth();
   const dayNow = now.getDate();
-  // console.log(yearNow, monthNow, dayNow);
+  console.log(yearNow, monthNow, dayNow);
 
   yearsRes = yearNow - inpYear;
-  if (inputMonth <= monthNow) {
+  if (inputMonth < monthNow) {
     monthsRes = monthNow - inputMonth;
   } else {
     yearsRes--;
     monthsRes = monthNow + 12 - inputMonth;
   }
-  if (inputDay <= dayNow) {
+  if (inputDay < dayNow) {
     daysRes = dayNow - inputDay;
   } else {
     monthsRes--;
@@ -132,11 +132,11 @@ const getResult = () => {
   console.log(yearsRes, monthsRes, daysRes);
   years.innerText = yearsRes;
   years.style.letterSpacing = "-0.02em";
-  years.style.marginRight = "12px";
+  years.style.marginRight = "10px";
   months.innerText = monthsRes;
   months.style.letterSpacing = "-0.02em";
-  months.style.marginRight = "12px";
+  months.style.marginRight = "10px";
   days.innerText = daysRes;
   days.style.letterSpacing = "-0.02em";
-  days.style.marginRight = "12px";
+  days.style.marginRight = "10px";
 };

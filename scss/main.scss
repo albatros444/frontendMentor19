@@ -10,9 +10,9 @@
 }
 .card {
   width: 840px;
-  // height: 680px;
   border-radius: 22px 22px 200px 22px;
   padding: 56px;
+  padding-bottom: 26px;
   background-color: white;
   &__inputs {
     position: relative;
@@ -20,27 +20,35 @@
     justify-content: space-between;
     width: 545px;
     margin-bottom: 40px;
-
-    .inputLabel {
-      margin-bottom: 8px;
-      font-size: 14px;
-      letter-spacing: 0.23em;
-      color: hsl(0, 1%, 44%);
-    }
-    input {
-      width: 160px;
-      height: 72px;
-      margin-bottom: 8px;
-      padding-left: 24px;
-      border: 1px solid hsl(0, 0%, 86%);
-      border-radius: 8px;
-      font-size: inherit;
-      &::placeholder {
-        color: hsl(0, 1%, 54%);
+    &__container {
+      .inputLabel {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        letter-spacing: 0.23em;
+        color: hsl(0, 1%, 44%);
       }
-    }
-    .errorText {
-      display: none;
+      input {
+        display: block;
+        width: 160px;
+        height: 72px;
+        margin-bottom: 8px;
+        padding-left: 24px;
+        border: 1px solid hsl(0, 0%, 86%);
+        border-radius: 8px;
+        font-size: inherit;
+
+        caret-color: hsl(259, 100%, 65%);
+        &::placeholder {
+          color: hsl(0, 1%, 54%);
+        }
+        &:focus {
+          border: 1px solid hsl(259, 54%, 45%);
+        }
+      }
+      .errorText {
+        display: none;
+      }
     }
     &__circleButton {
       position: absolute;
@@ -58,9 +66,13 @@
       font-family: inherit;
       text-align: center;
       text-decoration: none;
+      transition: all ease-in-out 0.153s;
+      &:hover {
+        background-color: hsl(0, 0%, 8%);
+      }
     }
     .wrong {
-      p {
+      label {
         color: hsl(0, 100%, 67%);
       }
       input {
@@ -71,12 +83,13 @@
         font-size: 14px;
         font-style: italic;
         margin-bottom: 8px;
+        color: hsl(0, 100%, 67%);
       }
     }
   }
   hr {
-    height: 1px;
-    background-color: hsl(0, 0%, 86%);
+    height: 2px;
+    background-color: hsl(0, 2%, 92%);
     border: none;
     margin-bottom: 48px;
   }
@@ -85,6 +98,7 @@
     font-weight: 700;
     font-style: italic;
     color: hsl(0, 0%, 8%);
+    padding-bottom: 30px;
     p {
       margin-bottom: 0;
       line-height: 1.1;
